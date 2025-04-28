@@ -1,5 +1,7 @@
+"use client";
+
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Use react-router-dom for routing in React
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // For mobile menu toggle
@@ -18,30 +20,30 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Left: Brand Heading */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold text-blue-600">
+            <Link href="/" className="text-2xl font-bold text-blue-600">
               BusinessLearn
             </Link>
           </div>
 
           {/* Center: Navigation Links */}
           <div className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">
               Home
             </Link>
-            <Link to="/features" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link href="/features" className="text-gray-700 hover:text-blue-600 transition-colors">
               Features
             </Link>
-            <Link to="/resources" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link href="/resources" className="text-gray-700 hover:text-blue-600 transition-colors">
               Resources
             </Link>
-            <Link to="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">
               Blog
             </Link>
           </div>
 
           {/* Right: Author Profiles & User Account */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="/authors" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link href="/authors" className="text-gray-700 hover:text-blue-600 transition-colors">
               Authors
             </Link>
             <div className="relative">
@@ -66,11 +68,13 @@ export default function Navbar() {
                 </svg>
               </button>
               <div
-                className={`absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 ${isDropdownOpen ? 'block' : 'hidden'}`}
+                className={`absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 ${
+                  isDropdownOpen ? 'block' : 'hidden'
+                }`}
               >
                 {isLoggedIn ? (
                   <Link
-                    to="/profile"
+                    href="/profile"
                     className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                     onClick={() => setIsDropdownOpen(false)}
                   >
@@ -79,14 +83,14 @@ export default function Navbar() {
                 ) : (
                   <>
                     <Link
-                      to="/login"
+                      href="/login"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       Log In
                     </Link>
                     <Link
-                      to="/signup"
+                      href="/signup"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                       onClick={() => setIsDropdownOpen(false)}
                     >
@@ -128,35 +132,35 @@ export default function Navbar() {
         <div className="md:hidden bg-white shadow-md">
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link
-              to="/"
+              href="/"
               className="block px-3 py-2 text-gray-700 hover:text-blue-600"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link
-              to="/features"
+              href="/features"
               className="block px-3 py-2 text-gray-700 hover:text-blue-600"
               onClick={() => setIsOpen(false)}
             >
               Features
             </Link>
             <Link
-              to="/resources"
+              href="/resources"
               className="block px-3 py-2 text-gray-700 hover:text-blue-600"
               onClick={() => setIsOpen(false)}
             >
               Resources
             </Link>
             <Link
-              to="/blog"
+              href="/blog"
               className="block px-3 py-2 text-gray-700 hover:text-blue-600"
               onClick={() => setIsOpen(false)}
             >
               Blog
             </Link>
             <Link
-              to="/authors"
+              href="/authors"
               className="block px-3 py-2 text-gray-700 hover:text-blue-600"
               onClick={() => setIsOpen(false)}
             >
@@ -164,7 +168,7 @@ export default function Navbar() {
             </Link>
             {isLoggedIn ? (
               <Link
-                to="/profile"
+                href="/profile"
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600"
                 onClick={() => setIsOpen(false)}
               >
@@ -173,14 +177,14 @@ export default function Navbar() {
             ) : (
               <>
                 <Link
-                  to="/login"
+                  href="/login"
                   className="block px-3 py-2 text-gray-700 hover:text-blue-600"
                   onClick={() => setIsOpen(false)}
                 >
                   Log In
                 </Link>
                 <Link
-                  to="/signup"
+                  href="/signup"
                   className="block px-3 py-2 text-gray-700 hover:text-blue-600"
                   onClick={() => setIsOpen(false)}
                 >

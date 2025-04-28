@@ -1,6 +1,6 @@
-"use client";  // This is specific to Next.js and can be removed in React
+"use client";
 
-import { Link } from 'react-router-dom'; // Use react-router-dom for routing in React
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Navbar from './components/Navbar';
 
@@ -48,7 +48,7 @@ export default function Home() {
               Unlock the potential of your startup with expert guidance, tools, and resources tailored to your success.
             </p>
             <Link
-              to="/features"  // React Router uses 'to' instead of 'href'
+              href="/features"
               className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors"
             >
               Learn More
