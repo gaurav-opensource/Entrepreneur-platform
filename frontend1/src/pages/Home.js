@@ -2,7 +2,8 @@
 
 import { Link } from 'react-router-dom'; // Use react-router-dom for routing in React
 import { motion } from 'framer-motion';
-import Navbar from './components/Navbar';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
@@ -104,6 +105,7 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
+        <Footer/>
       </main>
     </div>
   );
