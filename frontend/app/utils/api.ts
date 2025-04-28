@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000',
+  baseURL: 'https://entrepreneur-platform-ot9w.vercel.app/',
 });
 
 export default api;
