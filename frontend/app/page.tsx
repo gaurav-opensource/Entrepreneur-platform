@@ -1,14 +1,11 @@
 "use client";
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
       <main className="flex-grow">
         {/* Hero Section with Animation */}
         <section className="relative bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-32 text-center overflow-hidden">
@@ -106,7 +103,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

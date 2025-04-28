@@ -9,8 +9,7 @@ const nextConfig = {
       },
     ];
   },
-  // Ensure static export if using Render Static Site (optional, see Step 3)
-  output: 'standalone', // Use standalone for Node.js server on Render
+  output: 'standalone',
 };
 
 export default nextConfig;
